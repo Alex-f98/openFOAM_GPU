@@ -472,24 +472,96 @@ solo el 39 % del paso y la GPU solo gana 1,7× en él.** El registro completo es
 
 ---
 
-## 9. Pendientes, por orden de valor
+## 9. Plan de continuación: qué hacer, en orden
 
-1. **Medir `U` en GPU** (lo único sin dato). `U` es no simétrica, necesita **BiCGStab +
-   ILU0**. Para volcar su matriz hay que tocar 3 líneas en
-   `rocALUTION-solver/rocALUTIONLduSolver.C` (~línea 335): cambiar
-   `fieldName_ == "p"` por `fieldName_ == "Ux"` y el nombre del fichero. `bench_ilu.cpp` ya
-   tiene la factorización; falta el solver. **Sin esta medida, cualquier plan sobre `U` es
-   una apuesta.** Estimación: 1–2 h.
-2. **Mejorar el multigrid** para cerrar la brecha de iteraciones (39 → ~20): W-cycle,
-   agregación suavizada, interpolación de orden mayor. Con 20 iteraciones el bloque `p`
-   bajaría a ~45 ms y el paso a ~1,35×.
-3. **Ensamblado en el dispositivo**: la única vía para pasar de 2×. Es escribir un
-   `icoFoam` residente en HIP (2.000–4.000 líneas, 4–6 meses). El techo es 3,19× (si `p` y
-   `U` fueran gratis) y el realista ~2,3×.
-4. **Memoria unificada (MI300A) + malla de 64 M celdas**: el único régimen donde se publica
-   ×2. Aquí no cabe (166 GB de matriz vs 64 GB) y la MI210 es PCIe. La memoria unificada de
-   la MI210 **sí funciona pero no ayuda**: medido en `MEMORIA_UNIFICADA_MI210.md` (815 GB/s
-   si cabe y se precarga; 1,3–6,6 GB/s si no cabe).
+### 9.1 Antes de tocar nada (2 horas)
+
+```bash
+# en esta máquina todo ya está en /openfoamGPU; si es otra, primero §4.1 y §4.2
+cd /openfoamGPU && git log --oneline | head -3        # 547 ficheros, 6,6 MB
+source /openfoamGPU/exp_scaling_cpu/env_cpu.sh
+```
+
+Y correr la **prueba rápida de tres comandos** de [`README.md`](README.md#prueba-rápida-2-minutos).
+Criterio: si los tres dan los números de §6 (±3 %), el entorno está sano y puedes seguir. Si no,
+no empieces a medir: algo del entorno cambió (ROCm, carga de la máquina, GPU ocupada).
+
+### 9.2 La decisión que hay que tomar primero
+
+No hay una sola "continuación": depende de qué se quiera. Son tres objetivos distintos y el
+trabajo es distinto en cada uno.
+
+| Si el objetivo es… | Qué hacer | Esfuerzo |
+|---|---|---|
+| **A. Que esto corra más rápido ya** | Nada con la GPU: usar **64 núcleos de CPU** (0,274 s/paso). La GPU no ayuda a 2 M celdas. | 0 |
+| **B. Cerrar el tema** (informe/paper) | Solo falta **T1** (medir `U`). El resto de la tabla ya está. | 1–2 h |
+| **C. Preparar el código para una MI300A** | **T1 + T2**, y después T3. Es el único camino a >2×. | 1–2 semanas + 4–6 meses |
+
+Si no hay MI300A ni malla de 64 M celdas a la vista, el objetivo A es la respuesta correcta y el
+trabajo ya está hecho: 64 núcleos de CPU ganan a cualquier combinación con esta GPU.
+
+### 9.3 Tareas, con criterio de éxito
+
+**T1 — Medir `U` en GPU** (1–2 h, es lo único que falta en la tabla).
+`U` es no simétrica: hace falta **BiCGStab + ILU0**. `bench_ilu.cpp` ya construye la
+factorización; falta cambiar PCG por BiCGStab (~150 líneas). Para volcar la matriz, 3 líneas en
+`rocALUTION-solver/rocALUTIONLduSolver.C` (~línea 335): `fieldName_ == "p"` → `"Ux"` y el nombre
+del fichero. Después:
+
+```bash
+# CPU de referencia: bloque U = 103 ms a 32 rangos (18–21 iteraciones de smoothSolver)
+./bench_ilu roc_matrix_Ux.bin 1e-6 500 128
+```
+
+*Criterio:* si el bloque `U` en GPU baja de **60 ms**, el paso completo queda en ~0,25 s
+(**1,40×** vs 32 rangos) y vale la pena seguir; si baja a ~40 ms, ~0,23 s (**1,50×**). Si sale >100 ms, la GPU tampoco sirve para `U`:
+**cerrar el tema**, no hay nada más que rascar.
+*Ojo:* el 1,75× que se barajó en algún documento exigiría `U` en ~10 ms; con 21 iteraciones es
+poco probable. El número realista es **1,45–1,55×**.
+
+**T2 — Cerrar la brecha de iteraciones del multigrid** (1–2 semanas).
+Hoy: 39 iteraciones contra 13,45 de GAMG (2,9×). Objetivo: **≤ 22 iteraciones**. Las tres palancas,
+por orden de coste (de más barata a más cara): **W-cycle** (recursión doble, ~30 líneas en `bench_mg.cpp`), **agregación
+suavizada** (una pasada de Jacobi sobre la prolongación tentativa) y **Chebyshev** en vez de
+Gauss-Seidel en el suavizado.
+*Criterio:* bloque `p` ≤ **50 ms** (hoy 80,5) → paso ~0,26 s (**1,30–1,35×**).
+
+**T3 — Ensamblado en el dispositivo** (4–6 meses). Solo si T1 y T2 salieron bien.
+Es un `icoFoam` residente en HIP: 2.000–4.000 líneas. Sin T3 el techo práctico es **~1,8×**:
+el ensamblado (110 ms, el 31 % del paso) se queda en la CPU. Con él, **~2,3×**.
+
+**T4 — MI300A / 64 M celdas**. Es otro hardware, no una configuración: memoria compartida y
+~166 GB de estado. Ver [`MEMORIA_UNIFICADA_MI210.md`](MEMORIA_UNIFICADA_MI210.md).
+
+### 9.4 Qué no repetir
+
+§8, y en particular: `--hipstdpar` (451 s/paso), GAMG en GPU (no completa 1 paso), GPU como
+precondicionador MPI (10–77× más lento), matriz de `p` en FP32 (rompe 1e-6) y `FOAM_MEMORY_POOL=managed`
+esperando magia.
+
+### 9.5 Cómo dejar el trabajo (reglas de la casa)
+
+1. Cada número nuevo va a un `.csv` **y** a un `.md` con el comando que lo produjo. Un número sin
+   log no existe.
+2. No medir CPU y GPU a la vez; `OMP_NUM_THREADS=1` por rango.
+3. Si una medida contradice un documento, **se corrige el documento**, no se esconde la medida.
+   (Pasó dos veces en este proyecto: el 1,20× del paso y los 166 GB.)
+4. Al terminar una tarea: `git commit` y push. El repo es el entregable.
+
+### 9.6 Techos, para no hacerse ilusiones
+
+| Escenario | Paso (128³) | vs 32 rangos | Origen |
+|---|---|---|---|
+| Hoy: `p` en GPU | 0,294 s | **1,20×** | medido |
+| + `U` en GPU (T1) | ~0,23 s | ~1,5× | estimación con `U` ≈ 40 ms |
+| + multigrid afinado (T2) | ~0,20 s | ~1,75× | estimación con `p` ≈ 50 ms |
+| + ensamblado en GPU (T3) | ~0,15 s | ~2,3× | 4–6 meses, asumiendo que el ensamblado baja a ~60 ms |
+| Techo absoluto (`p` y `U` gratis) | 0,110 s | 3,19× | Amdahl, inalcanzable |
+
+Y el recordatorio que cierra el círculo: **64 núcleos de CPU hacen el paso en 0,2745 s**, un 7 %
+más rápido que el escenario de hoy. Solo T1+T2 (estimados en ~0,20 s) superarían a la CPU, y por
+poco; T3 sería la primera ventaja clara. **Todo lo que está por encima de la fila "hoy" es
+estimación, no medida**: la única forma de saberlo es hacer T1.
 
 ---
 

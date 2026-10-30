@@ -1,0 +1,58 @@
+# Salidas crudas de repro/bench_managed (MI210 GPU0, ROCm 7.2.4, 2026-10-29)
+#
+# Banco: AXPY y = 0.5*x + y sobre 4 GB x 2 buffers (8 GB de datos gestionados).
+# Trafico por pasada = 3 x 4 GB = 12 GB. "GB/s" ya lo tiene en cuenta.
+#
+# Compilar:
+#   hipcc -O3 -std=c++17 bench_managed.cpp -o bench_managed \
+#         -I/opt/rocm/include -L/opt/rocm/lib -Wl,-rpath,/opt/rocm/lib
+
+## A) VRAM de referencia:  MALLOC=device ./bench_managed 4 6
+GPU: 64.0 GB de VRAM (61.6 GB libres) | buffer gestionado: 4.0 GB x2
+alloc: hipMalloc (VRAM, referencia)
+alloc                :      0.3 ms
+pasada 1 (migracion) :     37.2 ms  ->  322.9 GB/s
+pasadas en caliente  :     14.5 ms  ->  829.4 GB/s  (mediana de 6)
+rango en caliente    : 14.4 - 14.6 ms
+coste de paginar el buffer entero cada pasada (estimacion): 285.7 ms a 28 GB/s
+
+## B) Managed bien usado (precarga explicita):  PREFETCH=1 ./bench_managed 4 6
+GPU: 64.0 GB de VRAM (61.6 GB libres) | buffer gestionado: 4.0 GB x2
+alloc: hipMallocManaged + hipMemPrefetchAsync a GPU0
+alloc                :   7405.3 ms          <-- los 7.4 s de precarga de 8 GB
+pasada 1 (migracion) :     11.4 ms  -> 1052.7 GB/s
+pasadas en caliente  :     14.7 ms  ->  815.3 GB/s  (mediana de 6)
+rango en caliente    : 14.6 - 14.8 ms
+
+## C) Managed a secas, corrida 1 (la buena):  ./bench_managed 4 6
+GPU: 64.0 GB de VRAM (61.6 GB libres) | buffer gestionado: 4.0 GB x2
+alloc: hipMallocManaged
+alloc                :    799.2 ms
+pasada 1 (migracion) :   4375.2 ms  ->    2.7 GB/s
+pasadas en caliente  :   1805.7 ms  ->    6.6 GB/s  (mediana de 6)
+rango en caliente    : 1765.6 - 1866.6 ms
+
+## C') Managed a secas, corrida 2 (mismo binario, mismo comando):
+GPU: 64.0 GB de VRAM (61.6 GB libres) | buffer gestionado: 4.0 GB x2
+alloc: hipMallocManaged
+alloc                :    806.8 ms
+pasada 1 (migracion) :  21275.8 ms  ->    0.6 GB/s
+pasadas en caliente  :   9147.6 ms  ->    1.3 GB/s  (mediana de 6)
+rango en caliente    : 9105.2 - 9183.6 ms
+#    ^ 1.3 vs 6.6 GB/s: 5x de variacion entre corridas identicas. No es un
+#      numero estable; no sirve para planificar. Y ambos son catastroficos.
+
+## D) CPU rellena y despues precarga:  HOSTTOUCH=1 PREFETCH=1 ./bench_managed 4 6
+GPU: 64.0 GB de VRAM (61.6 GB libres) | buffer gestionado: 4.0 GB x2
+alloc: hipMallocManaged + hipMemPrefetchAsync a GPU0
+alloc                :   7488.3 ms          <-- igual: el coste es por pagina, no por dato
+pasada 1 (migracion) :     59.1 ms  ->  203.2 GB/s
+pasadas en caliente  :     14.7 ms  ->  816.5 GB/s  (mediana de 6)
+rango en caliente    : 14.7 - 14.8 ms
+
+## E) XNACK:  HSA_XNACK=1 ./bench_managed 4 2
+# Sin salida: no termino en 120 s (proceso terminado a mano). Inusable en esta pila.
+
+## F) Caso C (no cabe en VRAM):  ./bench_managed 40 3   -- NO EJECUTADO
+# 2 x 40 GB = 80 GB gestionados en una tarjeta de 64 GB. Necesita ~90 GB de RAM
+# y entre 15 y 30 min. Acotado por §3 del documento: 7 a 157 s por pasada.

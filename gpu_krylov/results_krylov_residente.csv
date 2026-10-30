@@ -1,0 +1,38 @@
+# Ruta C: Krylov residente en GPU, 128^3 (2097152 celdas, 14581760 nnz), MI210 GPU 0
+# tol = reduccion relativa de ||b||; tiempos de pared, 3 repeticiones
+# spmv_rocsparse_ms=0.219 (951 GB/s efectivos)
+regime,tol,iters,time_ms,ms_per_iter,setup_ms
+jacobi,1e-02,298,168.0,0.564,0
+jacobi,1e-04,410,230.0,0.561,0
+jacobi,1e-06,1029,579.4,0.563,0
+jacobi,1e-08,1143,643.8,0.563,0
+ilu0_2color,1e-02,152,261.1,1.718,180.6
+ilu0_2color,1e-04,209,344.7,1.649,180.6
+ilu0_2color,1e-06,524,815.0,1.555,180.6
+ilu0_2color,1e-08,582,908.0,1.560,180.6
+mg_2x2x2_gs2,1e-02,14,28.3,2.022,1.0
+mg_2x2x2_gs2,1e-04,32,66.9,2.091,1.0
+mg_2x2x2_gs2,1e-06,44,93.5,2.125,1.0
+mg_2x2x2_gs2,1e-08,52,111.4,2.142,1.0
+# --- secuencia en caliente equivalente a un paso de OpenFOAM (p + pFinal) ---
+# arranque 0.128 -> p (relTol 0.01) -> pFinal (1e-6); cada pasada parte de la anterior
+mg_warm_p,1.3e-03,12,24.1,2.008,1.2
+mg_warm_pfinal,1e-06,27,56.4,2.089,0
+mg_warm_block_p+pFinal,1e-06,39,80.5,2.064,1.2
+# --- CPU medida por diferencia de 3 corridas (COMPARACION_PRESION_GPU_CPU.md) ---
+cpu_block_p_np1,,,,3513,
+cpu_block_p_np32,,,,138.5,
+cpu_block_p_np64,,,,106,
+# --- coeficientes de la matriz en FP32 (compilado con -DUSE_FLOAT_COEFFS) ---
+# mismas 39 iteraciones; residual real contra la matriz FP64 = 9.4e-06 (FP64: 4.4e-07)
+mg_f32coef_warm_block,1e-06,39,58.8,1.508,1.2
+# --- escalado del kernel con el tamano (Laplaciano 7 puntos sintetico, 10 iters) ---
+mg_synth_128,1e-06,13,19.8,1.523,1.1
+mg_synth_256,1e-06,13,127.5,9.808,2.2
+# --- enlace host<->GPU (bench_pcie, Gen4 x16 confirmado) ---
+# buffer_MB,dir,pageable_GBs,pinned_GBs
+16.8,H2D,27.8,26.1
+16.8,D2H,14.2,27.8
+175,H2D,28.1,28.0
+175,D2H,25.5,28.1
+# latencia H2D 8 B = 11.7 us ; round trip de un vector 128^3 = 1.2 ms

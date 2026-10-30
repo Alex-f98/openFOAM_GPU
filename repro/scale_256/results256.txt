@@ -1,0 +1,4 @@
+np=32 variant=gamg rc=0 exec=133.42 wall=137.78
+np=32 variant=p1 rc=1 exec=77.52 wall=150.56
+np=32 variant=both1 rc=0 exec=24.51 wall=27.12
+DONE

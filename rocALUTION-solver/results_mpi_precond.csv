@@ -1,0 +1,3 @@
+nprocs,ncells,steps,wall_s,step_s,cpu_gamg_step_s,gpu_over_cpu,p_iters_cpu,p_iters_gpu_max,amg_setup_ms_min,amg_setup_ms_max,status,note
+8,2097152,20,194,9.7,0.96,10.1,11,111,527,972,ok,128^3 20 pasos; tiempos de pared
+16,2097152,19,792,41.7,0.54,77.2,11,149,1337,3566,partial,matado en el ultimo paso tras 19 completos

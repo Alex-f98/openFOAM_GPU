@@ -1,0 +1,3 @@
+size,nx,ny,nz,ncells,iters_done,t_wall_s,t_step_avg_s,t_step_sum_s,t_exec_last_s,notes
+32,32768,timeout,,1500.07,0,NA,NA,0.2,94.0,2410,Re100 U1 nu0.01 20steps dt0.005 GPU0 pool_host1024 rc124
+32,32768,timeout,2,1500.07,902.29,451.1450,0.01376785,0.1,94.0,2410,Re100 U1 nu0.01 20steps dt0.005 GPU0 pool_host1024 rc124

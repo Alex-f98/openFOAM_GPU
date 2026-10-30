@@ -1,0 +1,3945 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2606                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _481094fdf3-20260618 OPENFOAM=2606 version=v2606
+Arch   : "LSB;label=32;scalar=64"
+Exec   : icoFoam
+Date   : Oct 26 2026
+Time   : 18:38:26
+Host   : 3585e49b778d
+PID    : 4120974
+I/O    : uncollated
+Case   : /openfoamGPU/rocALUTION-solver/case_64cube_roc
+nProcs : 1
+memory pool : not available
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+
+--> FOAM Warning : allowSystemOperations : Allowing user-supplied system call operations.
+                   This can be a security risk if running untrusted cases
+                   through e.g. 'coded' on-the-fly-compilation functionality.
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+PISO: Operating solver in PISO mode
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.005
+
+Courant Number mean: 0 max: 0
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 2.77675e-07, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Uz, Initial residual = 0, Final residual = 0, No Iterations 0
+Number of CPU cores: 128
+Host thread affinity policy - thread mapping on every second core (avoiding HyperThreading)
+Number of HIP devices in the system: 1
+*** warning: LocalMatrix::RSCoarsening() is performed on the host
+*** warning: LocalMatrix::RSCoarsening() is performed on the host
+*** warning: LocalMatrix::RSCoarsening() is performed on the host
+*** warning: LocalMatrix::RSCoarsening() is performed on the host
+*** warning: LocalMatrix::RSCoarsening() is performed on the host
+rocALUTION build: field=p nCells=262144 nnz=1810432 symmetric=1 precon="AMG" negate=1 diag=[-0.000210315, -8.56329e-05] upper=[2.85443e-05, 3.50525e-05] time=364.094 ms
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 0.00064477
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.67772e-07; rel val=0.000570392; iter=5
+PCG ends
+rocALUTION timing: field=p fill=0 update+rebuild=0 transfer=3.04307 solve=136.862 iters=5 target=0.01 tolRel=0.0025 normFactor=0.00941689 bnorm=0.00064477 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 1, Final residual = 0.00653199, No Iterations 5
+time step continuity errors : sum local = 3.07555e-07, global = -9.98655e-22, cumulative = -9.98655e-22
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=7.81803e-07; div tol=1e+08; max iter=100
+IterationControl initial residual = 0.000189123
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=6.39679e-11; rel val=3.38235e-07; iter=10
+PCG ends
+rocALUTION timing: field=p fill=6.5557 update+rebuild=0 transfer=1.83286 solve=31.636 iters=10 target=1e-06 tolRel=7.81803e-07 normFactor=0.0166265 bnorm=0.000495054 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.319774, Final residual = 8.24106e-07, No Iterations 10
+time step continuity errors : sum local = 6.85095e-11, global = 1.18481e-21, cumulative = 1.86157e-22
+ExecutionTime = 2.17 s  ClockTime = 2 s
+
+Time = 0.01
+
+Courant Number mean: 0.00350135 max: 0.0802736
+smoothSolver:  Solving for Ux, Initial residual = 0.28085, Final residual = 1.67084e-07, No Iterations 7
+smoothSolver:  Solving for Uy, Initial residual = 0.322498, Final residual = 3.32936e-07, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.927416, Final residual = 8.18758e-07, No Iterations 7
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 6.83808e-05
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=6.09839e-08; rel val=0.000891827; iter=5
+PCG ends
+rocALUTION timing: field=p fill=2.84696 update+rebuild=35.6113 transfer=1.63194 solve=16.0945 iters=5 target=0.00168588 tolRel=0.0025 normFactor=0.016751 bnorm=0.000525373 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.168588, Final residual = 0.000754222, No Iterations 5
+time step continuity errors : sum local = 6.31698e-08, global = -7.03964e-22, cumulative = -5.17807e-22
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=3.89253e-06; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.0931e-05
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=5.02758e-11; rel val=2.40198e-06; iter=9
+PCG ends
+rocALUTION timing: field=p fill=6.81134 update+rebuild=0 transfer=1.68062 solve=28.4177 iters=9 target=1e-06 tolRel=3.89253e-06 normFactor=0.0183927 bnorm=0.000523888 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0642256, Final residual = 6.75219e-07, No Iterations 9
+time step continuity errors : sum local = 6.20956e-11, global = 5.92926e-22, cumulative = 7.51197e-23
+ExecutionTime = 2.58 s  ClockTime = 2 s
+
+Time = 0.015
+
+Courant Number mean: 0.00612061 max: 0.132505
+smoothSolver:  Solving for Ux, Initial residual = 0.14694, Final residual = 6.78792e-07, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.170942, Final residual = 1.81202e-07, No Iterations 7
+smoothSolver:  Solving for Uz, Initial residual = 0.338984, Final residual = 3.05352e-07, No Iterations 7
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 3.8261e-05
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.86646e-08; rel val=0.00101055; iter=5
+PCG ends
+rocALUTION timing: field=p fill=6.45226 update+rebuild=30.3488 transfer=2.24729 solve=16.0233 iters=5 target=0.00089328 tolRel=0.0025 normFactor=0.0190534 bnorm=0.000538354 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.089328, Final residual = 0.000433873, No Iterations 5
+time step continuity errors : sum local = 4.13338e-08, global = 1.9412e-21, cumulative = 2.01632e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=6.49676e-06; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.2798e-05
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.23315e-11; rel val=2.52629e-06; iter=9
+PCG ends
+rocALUTION timing: field=p fill=9.27589 update+rebuild=0 transfer=1.66996 solve=27.2145 iters=9 target=1e-06 tolRel=6.49676e-06 normFactor=0.0200086 bnorm=0.000537155 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0384807, Final residual = 4.046e-07, No Iterations 9
+time step continuity errors : sum local = 4.04775e-11, global = 1.67741e-21, cumulative = 3.69373e-21
+ExecutionTime = 3.02 s  ClockTime = 2 s
+
+Time = 0.02
+
+Courant Number mean: 0.0081787 max: 0.16721
+smoothSolver:  Solving for Ux, Initial residual = 0.0938329, Final residual = 4.60617e-07, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.109319, Final residual = 8.36053e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.203904, Final residual = 1.90047e-07, No Iterations 7
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.75409e-05
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=2.68536e-08; rel val=0.000975045; iter=5
+PCG ends
+rocALUTION timing: field=p fill=2.83905 update+rebuild=36.1978 transfer=1.5975 solve=15.9398 iters=5 target=0.000625728 tolRel=0.0025 normFactor=0.0205298 bnorm=0.000544562 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0625728, Final residual = 0.000277186, No Iterations 5
+time step continuity errors : sum local = 2.8453e-08, global = 2.09396e-21, cumulative = 5.78769e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=9.55738e-06; div tol=1e+08; max iter=100
+IterationControl initial residual = 9.31076e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=2.23795e-11; rel val=2.40362e-06; iter=9
+PCG ends
+rocALUTION timing: field=p fill=6.59305 update+rebuild=0 transfer=1.56784 solve=28.3068 iters=9 target=1e-06 tolRel=9.55738e-06 normFactor=0.0212089 bnorm=0.000543835 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0261578, Final residual = 2.60122e-07, No Iterations 9
+time step continuity errors : sum local = 2.75844e-11, global = 3.59519e-21, cumulative = 9.38288e-21
+ExecutionTime = 3.41 s  ClockTime = 3 s
+
+Time = 0.025
+
+Courant Number mean: 0.0098605 max: 0.190929
+smoothSolver:  Solving for Ux, Initial residual = 0.0664417, Final residual = 3.44971e-07, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0775052, Final residual = 6.04911e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.150547, Final residual = 1.43432e-07, No Iterations 7
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.10202e-05
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=1.91915e-08; rel val=0.000913004; iter=5
+PCG ends
+rocALUTION timing: field=p fill=7.57892 update+rebuild=34.8157 transfer=1.97051 solve=16.0068 iters=5 target=0.000459982 tolRel=0.0025 normFactor=0.0216902 bnorm=0.000548819 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0459982, Final residual = 0.000185166, No Iterations 5
+time step continuity errors : sum local = 2.00814e-08, global = 1.87858e-21, cumulative = 1.12615e-20
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=1.33563e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 6.89114e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=7.28968e-11; rel val=1.05783e-05; iter=8
+PCG ends
+rocALUTION timing: field=p fill=9.17991 update+rebuild=0 transfer=1.80741 solve=25.1691 iters=8 target=1e-06 tolRel=1.33563e-05 normFactor=0.0222608 bnorm=0.000548163 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0187178, Final residual = 8.01195e-07, No Iterations 8
+time step continuity errors : sum local = 8.9176e-11, global = -1.61826e-21, cumulative = 9.6432e-21
+ExecutionTime = 3.83 s  ClockTime = 3 s
+
+Time = 0.03
+
+Courant Number mean: 0.011272 max: 0.207639
+smoothSolver:  Solving for Ux, Initial residual = 0.0505799, Final residual = 2.74918e-07, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0588725, Final residual = 4.67448e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.119196, Final residual = 8.23536e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.68694e-05
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=1.42009e-08; rel val=0.000841817; iter=5
+PCG ends
+rocALUTION timing: field=p fill=6.64949 update+rebuild=33.445 transfer=1.49892 solve=16.0811 iters=5 target=0.000367181 tolRel=0.0025 normFactor=0.022695 bnorm=0.000552065 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0367181, Final residual = 0.000128443, No Iterations 5
+time step continuity errors : sum local = 1.45751e-08, global = 2.61203e-21, cumulative = 1.22552e-20
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=1.74047e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 5.36068e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=5.34418e-11; rel val=9.96922e-06; iter=8
+PCG ends
+rocALUTION timing: field=p fill=9.34057 update+rebuild=0 transfer=1.62414 solve=31.8164 iters=8 target=1e-06 tolRel=1.74047e-05 normFactor=0.0231777 bnorm=0.000551405 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.014364, Final residual = 5.53468e-07, No Iterations 8
+time step continuity errors : sum local = 6.41405e-11, global = -5.07589e-22, cumulative = 1.17476e-20
+ExecutionTime = 4.24 s  ClockTime = 4 s
+
+Time = 0.035
+
+Courant Number mean: 0.0124839 max: 0.219788
+smoothSolver:  Solving for Ux, Initial residual = 0.0404263, Final residual = 2.29069e-07, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0469819, Final residual = 3.7834e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.0979869, Final residual = 6.87082e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.31646e-05
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=1.06296e-08; rel val=0.000807441; iter=5
+PCG ends
+rocALUTION timing: field=p fill=6.62166 update+rebuild=33.5511 transfer=1.52686 solve=15.9589 iters=5 target=0.000280296 tolRel=0.0025 normFactor=0.0234792 bnorm=0.000554312 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0280296, Final residual = 9.33988e-05, No Iterations 5
+time step continuity errors : sum local = 1.09646e-08, global = 3.20751e-21, cumulative = 1.49551e-20
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=2.21825e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 4.21451e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=4.00374e-11; rel val=9.49987e-06; iter=8
+PCG ends
+rocALUTION timing: field=p fill=9.25223 update+rebuild=0 transfer=1.74915 solve=25.1631 iters=8 target=1e-06 tolRel=2.21825e-05 normFactor=0.0238297 bnorm=0.000553627 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0112701, Final residual = 4.00718e-07, No Iterations 8
+time step continuity errors : sum local = 4.7745e-11, global = -2.1593e-21, cumulative = 1.27958e-20
+ExecutionTime = 4.64 s  ClockTime = 4 s
+
+Time = 0.04
+
+Courant Number mean: 0.0135479 max: 0.228898
+smoothSolver:  Solving for Ux, Initial residual = 0.0335045, Final residual = 1.9692e-07, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0388877, Final residual = 3.16742e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.0826415, Final residual = 5.87444e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.08409e-05
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=8.33765e-09; rel val=0.000769095; iter=5
+PCG ends
+rocALUTION timing: field=p fill=6.4952 update+rebuild=37.5652 transfer=1.52183 solve=16.0751 iters=5 target=0.000226453 tolRel=0.0025 normFactor=0.0241078 bnorm=0.000556066 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0226453, Final residual = 7.05019e-05, No Iterations 5
+time step continuity errors : sum local = 8.49824e-09, global = -1.08139e-21, cumulative = 1.17145e-20
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=2.72675e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 3.39075e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.11044e-11; rel val=9.17332e-06; iter=8
+PCG ends
+rocALUTION timing: field=p fill=6.55075 update+rebuild=0 transfer=1.70965 solve=25.1062 iters=8 target=1e-06 tolRel=2.72675e-05 normFactor=0.0244127 bnorm=0.000555477 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00916841, Final residual = 3.00923e-07, No Iterations 8
+time step continuity errors : sum local = 3.67316e-11, global = -2.55553e-21, cumulative = 9.15893e-21
+ExecutionTime = 5.06 s  ClockTime = 4 s
+
+Time = 0.045
+
+Courant Number mean: 0.0145146 max: 0.235937
+smoothSolver:  Solving for Ux, Initial residual = 0.0285918, Final residual = 1.72923e-07, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0330893, Final residual = 2.72041e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.0710873, Final residual = 5.11079e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 7.72787e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=6.62486e-09; rel val=0.000857269; iter=5
+PCG ends
+rocALUTION timing: field=p fill=3.82036 update+rebuild=37.4332 transfer=1.52075 solve=15.9746 iters=5 target=0.000177479 tolRel=0.0025 normFactor=0.0246097 bnorm=0.000557169 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0177479, Final residual = 5.53617e-05, No Iterations 5
+time step continuity errors : sum local = 6.81219e-09, global = 4.19791e-22, cumulative = 9.57872e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=3.35366e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.65957e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=2.46473e-11; rel val=9.26741e-06; iter=8
+PCG ends
+rocALUTION timing: field=p fill=6.53114 update+rebuild=0 transfer=1.76192 solve=25.6136 iters=8 target=1e-06 tolRel=3.35366e-05 normFactor=0.0248357 bnorm=0.000556754 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00745455, Final residual = 2.35184e-07, No Iterations 8
+time step continuity errors : sum local = 2.92047e-11, global = -4.76895e-21, cumulative = 4.80978e-21
+ExecutionTime = 5.46 s  ClockTime = 5 s
+
+Time = 0.05
+
+Courant Number mean: 0.0153975 max: 0.241528
+smoothSolver:  Solving for Ux, Initial residual = 0.0248926, Final residual = 1.542e-07, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0287605, Final residual = 2.38283e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.0621089, Final residual = 4.51359e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 6.48522e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=5.4564e-09; rel val=0.000841359; iter=5
+PCG ends
+rocALUTION timing: field=p fill=2.93284 update+rebuild=22.9455 transfer=1.51659 solve=15.9551 iters=5 target=0.000152929 tolRel=0.0025 normFactor=0.0250106 bnorm=0.000558216 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0152929, Final residual = 4.45175e-05, No Iterations 5
+time step continuity errors : sum local = 5.56707e-09, global = -3.14894e-21, cumulative = 1.66083e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=3.86833e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.26737e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=2.01622e-11; rel val=8.89234e-06; iter=8
+PCG ends
+rocALUTION timing: field=p fill=3.93335 update+rebuild=0 transfer=2.00273 solve=25.0672 iters=8 target=1e-06 tolRel=3.86833e-05 normFactor=0.025201 bnorm=0.000557831 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00646273, Final residual = 1.87815e-07, No Iterations 8
+time step continuity errors : sum local = 2.36656e-11, global = 2.07723e-21, cumulative = 3.73807e-21
+ExecutionTime = 5.83 s  ClockTime = 5 s
+
+Time = 0.055
+
+Courant Number mean: 0.0162092 max: 0.246079
+smoothSolver:  Solving for Ux, Initial residual = 0.0220001, Final residual = 1.39388e-07, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0254181, Final residual = 2.1193e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.0550117, Final residual = 4.03677e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 5.55209e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=4.59293e-09; rel val=0.000827244; iter=5
+PCG ends
+rocALUTION timing: field=p fill=2.94758 update+rebuild=29.2268 transfer=1.81173 solve=15.8656 iters=5 target=0.000133449 tolRel=0.0025 normFactor=0.0253543 bnorm=0.000559096 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0133449, Final residual = 3.66774e-05, No Iterations 5
+time step continuity errors : sum local = 4.64966e-09, global = -1.2412e-21, cumulative = 2.49687e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=4.39162e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.96581e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=1.68653e-11; rel val=8.57931e-06; iter=8
+PCG ends
+rocALUTION timing: field=p fill=9.13249 update+rebuild=0 transfer=1.72359 solve=25.1527 iters=8 target=1e-06 tolRel=4.39162e-05 normFactor=0.0255193 bnorm=0.000558743 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00569266, Final residual = 1.5395e-07, No Iterations 8
+time step continuity errors : sum local = 1.96434e-11, global = 2.94505e-21, cumulative = 5.44192e-21
+ExecutionTime = 6.21 s  ClockTime = 6 s
+
+Time = 0.06
+
+Courant Number mean: 0.0169602 max: 0.249865
+smoothSolver:  Solving for Ux, Initial residual = 0.019697, Final residual = 9.19323e-07, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0227639, Final residual = 1.90803e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.0492993, Final residual = 3.64795e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 4.75974e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.93133e-09; rel val=0.000825953; iter=5
+PCG ends
+rocALUTION timing: field=p fill=6.47302 update+rebuild=33.2069 transfer=1.66782 solve=16.0918 iters=5 target=0.0001175 tolRel=0.0025 normFactor=0.02565 bnorm=0.000559799 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.01175, Final residual = 3.08992e-05, No Iterations 5
+time step continuity errors : sum local = 3.96283e-09, global = -2.60913e-21, cumulative = 2.83278e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=4.92975e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.71547e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=8.16156e-11; rel val=4.75761e-05; iter=7
+PCG ends
+rocALUTION timing: field=p fill=6.56871 update+rebuild=0 transfer=1.70644 solve=22.0564 iters=7 target=1e-06 tolRel=4.92975e-05 normFactor=0.0257915 bnorm=0.00055949 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00507125, Final residual = 7.81579e-07, No Iterations 7
+time step continuity errors : sum local = 1.0079e-10, global = -1.36347e-21, cumulative = 1.46932e-21
+ExecutionTime = 6.61 s  ClockTime = 6 s
+
+Time = 0.065
+
+Courant Number mean: 0.0176588 max: 0.253074
+smoothSolver:  Solving for Ux, Initial residual = 0.0178477, Final residual = 8.45634e-07, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0206071, Final residual = 1.73491e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.0446164, Final residual = 3.32573e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 4.13373e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.41987e-09; rel val=0.000827309; iter=5
+PCG ends
+rocALUTION timing: field=p fill=2.97028 update+rebuild=30.8221 transfer=1.50985 solve=15.9889 iters=5 target=0.000105087 tolRel=0.0025 normFactor=0.0259057 bnorm=0.000560378 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0105087, Final residual = 2.65154e-05, No Iterations 5
+time step continuity errors : sum local = 3.43451e-09, global = 1.39836e-21, cumulative = 2.86767e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=5.4573e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.51583e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=7.0191e-11; rel val=4.63054e-05; iter=7
+PCG ends
+rocALUTION timing: field=p fill=3.72829 update+rebuild=0 transfer=1.73545 solve=22.0055 iters=7 target=1e-06 tolRel=5.4573e-05 normFactor=0.026028 bnorm=0.000560109 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00458102, Final residual = 6.63162e-07, No Iterations 7
+time step continuity errors : sum local = 8.63032e-11, global = 5.22305e-21, cumulative = 8.09072e-21
+ExecutionTime = 6.96 s  ClockTime = 6 s
+
+Time = 0.07
+
+Courant Number mean: 0.0183115 max: 0.255839
+smoothSolver:  Solving for Ux, Initial residual = 0.0163161, Final residual = 7.83296e-07, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0188201, Final residual = 1.59043e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.0407156, Final residual = 3.0549e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 3.6324e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.01466e-09; rel val=0.000829936; iter=5
+PCG ends
+rocALUTION timing: field=p fill=3.72494 update+rebuild=38.7334 transfer=1.60727 solve=16.2364 iters=5 target=9.55289e-05 tolRel=0.0025 normFactor=0.0261283 bnorm=0.000560858 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00955289, Final residual = 2.31128e-05, No Iterations 5
+time step continuity errors : sum local = 3.01951e-09, global = 2.22673e-21, cumulative = 1.03175e-20
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=5.96974e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.35324e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=6.12139e-11; rel val=4.52351e-05; iter=7
+PCG ends
+rocALUTION timing: field=p fill=9.19536 update+rebuild=0 transfer=1.72634 solve=22.2369 iters=7 target=1e-06 tolRel=5.96974e-05 normFactor=0.0262355 bnorm=0.000560623 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00418779, Final residual = 5.71973e-07, No Iterations 7
+time step continuity errors : sum local = 7.50293e-11, global = -1.39154e-21, cumulative = 8.92591e-21
+ExecutionTime = 7.35 s  ClockTime = 7 s
+
+Time = 0.075
+
+Courant Number mean: 0.0189252 max: 0.258252
+smoothSolver:  Solving for Ux, Initial residual = 0.0150204, Final residual = 7.29826e-07, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0173146, Final residual = 1.46798e-07, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.0374271, Final residual = 2.82448e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 3.22524e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=2.68761e-09; rel val=0.000833305; iter=5
+PCG ends
+rocALUTION timing: field=p fill=6.50945 update+rebuild=33.5363 transfer=1.52571 solve=15.8439 iters=5 target=8.75519e-05 tolRel=0.0025 normFactor=0.026324 bnorm=0.000561259 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00875519, Final residual = 2.04086e-05, No Iterations 5
+time step continuity errors : sum local = 2.68618e-09, global = 2.15146e-21, cumulative = 1.10774e-20
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=6.4528e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.21882e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=5.40333e-11; rel val=4.43323e-05; iter=7
+PCG ends
+rocALUTION timing: field=p fill=3.69299 update+rebuild=0 transfer=1.75456 solve=22.0252 iters=7 target=1e-06 tolRel=6.4528e-05 normFactor=0.0264184 bnorm=0.000561053 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00387429, Final residual = 5.0018e-07, No Iterations 7
+time step continuity errors : sum local = 6.60691e-11, global = -1.58207e-21, cumulative = 9.49531e-21
+ExecutionTime = 7.74 s  ClockTime = 7 s
+
+Time = 0.08
+
+Courant Number mean: 0.0195136 max: 0.260383
+smoothSolver:  Solving for Ux, Initial residual = 0.0139046, Final residual = 6.83009e-07, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0160286, Final residual = 9.54325e-07, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0346221, Final residual = 2.62626e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.88746e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=2.41778e-09; rel val=0.000837337; iter=5
+PCG ends
+rocALUTION timing: field=p fill=6.64424 update+rebuild=33.1681 transfer=1.65751 solve=16.1764 iters=5 target=8.06923e-05 tolRel=0.0025 normFactor=0.0264972 bnorm=0.000561598 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00806923, Final residual = 1.82118e-05, No Iterations 5
+time step continuity errors : sum local = 2.41281e-09, global = -5.76734e-21, cumulative = 3.72797e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=6.94404e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.10584e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=4.81671e-11; rel val=4.35571e-05; iter=7
+PCG ends
+rocALUTION timing: field=p fill=9.29369 update+rebuild=0 transfer=1.71229 solve=22.1619 iters=7 target=1e-06 tolRel=6.94404e-05 normFactor=0.0265809 bnorm=0.000561418 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00360021, Final residual = 4.4231e-07, No Iterations 7
+time step continuity errors : sum local = 5.87844e-11, global = -8.94976e-21, cumulative = -5.22179e-21
+ExecutionTime = 8.12 s  ClockTime = 7 s
+
+Time = 0.085
+
+Courant Number mean: 0.0200769 max: 0.262282
+smoothSolver:  Solving for Ux, Initial residual = 0.0129318, Final residual = 6.41372e-07, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0149175, Final residual = 8.90087e-07, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.032209, Final residual = 2.45421e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.60812e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=2.19354e-09; rel val=0.000841042; iter=5
+PCG ends
+rocALUTION timing: field=p fill=3.83492 update+rebuild=40.632 transfer=1.51588 solve=16.126 iters=5 target=7.48933e-05 tolRel=0.0025 normFactor=0.0266515 bnorm=0.000561888 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00748933, Final residual = 1.64025e-05, No Iterations 5
+time step continuity errors : sum local = 2.18576e-09, global = -2.75665e-21, cumulative = -7.97843e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=7.44476e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 1.01056e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=4.33467e-11; rel val=4.28937e-05; iter=7
+PCG ends
+rocALUTION timing: field=p fill=2.87302 update+rebuild=0 transfer=1.74203 solve=22.1366 iters=7 target=1e-06 tolRel=7.44476e-05 normFactor=0.0267263 bnorm=0.000561729 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00335807, Final residual = 3.95256e-07, No Iterations 7
+time step continuity errors : sum local = 5.28182e-11, global = 1.24179e-22, cumulative = -7.85426e-21
+ExecutionTime = 8.51 s  ClockTime = 8 s
+
+Time = 0.09
+
+Courant Number mean: 0.020615 max: 0.26399
+smoothSolver:  Solving for Ux, Initial residual = 0.0120898, Final residual = 6.04646e-07, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0139476, Final residual = 8.33806e-07, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.030108, Final residual = 2.30342e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.37269e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=2.00386e-09; rel val=0.000844554; iter=5
+PCG ends
+rocALUTION timing: field=p fill=6.50996 update+rebuild=33.3417 transfer=1.50674 solve=15.9547 iters=5 target=6.98857e-05 tolRel=0.0025 normFactor=0.0267901 bnorm=0.000562137 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00698857, Final residual = 1.48953e-05, No Iterations 5
+time step continuity errors : sum local = 1.99523e-09, global = -1.96488e-21, cumulative = -9.81913e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=7.94192e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 9.29199e-07
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.93192e-11; rel val=4.23151e-05; iter=7
+PCG ends
+rocALUTION timing: field=p fill=6.62579 update+rebuild=0 transfer=1.72437 solve=22.1429 iters=7 target=1e-06 tolRel=7.94192e-05 normFactor=0.0268573 bnorm=0.000561996 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00314785, Final residual = 3.56366e-07, No Iterations 7
+time step continuity errors : sum local = 4.78546e-11, global = 3.71854e-21, cumulative = -6.10059e-21
+ExecutionTime = 8.9 s  ClockTime = 8 s
+
+Time = 0.095
+
+Courant Number mean: 0.0211303 max: 0.265537
+smoothSolver:  Solving for Ux, Initial residual = 0.0113494, Final residual = 5.71931e-07, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.013094, Final residual = 7.84082e-07, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0282648, Final residual = 2.17029e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.19845e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=1.84748e-09; rel val=0.000840357; iter=5
+PCG ends
+rocALUTION timing: field=p fill=2.85891 update+rebuild=27.3342 transfer=1.51936 solve=15.9136 iters=5 target=6.62882e-05 tolRel=0.0025 normFactor=0.0269156 bnorm=0.000562353 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00662882, Final residual = 1.35819e-05, No Iterations 5
+time step continuity errors : sum local = 1.82784e-09, global = -5.37188e-22, cumulative = -6.63778e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=8.36133e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 8.64017e-07
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.59417e-11; rel val=4.15984e-05; iter=7
+PCG ends
+rocALUTION timing: field=p fill=3.96929 update+rebuild=0 transfer=1.75623 solve=22.1492 iters=7 target=1e-06 tolRel=8.36133e-05 normFactor=0.0269765 bnorm=0.000562228 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00298996, Final residual = 3.23432e-07, No Iterations 7
+time step continuity errors : sum local = 4.36249e-11, global = 1.50994e-21, cumulative = -5.12784e-21
+ExecutionTime = 9.25 s  ClockTime = 9 s
+
+Time = 0.1
+
+Courant Number mean: 0.021624 max: 0.266947
+smoothSolver:  Solving for Ux, Initial residual = 0.0106899, Final residual = 5.4253e-07, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0123367, Final residual = 7.39827e-07, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0266375, Final residual = 2.05206e-07, No Iterations 6
+*** warning: LocalMatrix::UpdateValuesCSR() is performed on the host
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=0.0025; div tol=1e+08; max iter=100
+IterationControl initial residual = 2.00817e-06
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=1.69964e-09; rel val=0.000846365; iter=5
+PCG ends
+rocALUTION timing: field=p fill=2.96376 update+rebuild=22.5661 transfer=1.5278 solve=15.8165 iters=5 target=6.1839e-05 tolRel=0.0025 normFactor=0.0270298 bnorm=0.000562542 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.0061839, Final residual = 1.24979e-05, No Iterations 5
+time step continuity errors : sum local = 1.68909e-09, global = 1.1276e-21, cumulative = -4.00024e-21
+PCG solver starts, with preconditioner:
+AMG solver
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=0; rel tol=8.92906e-05; div tol=1e+08; max iter=100
+IterationControl initial residual = 7.88929e-07
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+AMG solver starts
+AMG number of levels 6
+AMG Ruge-Stuben using Greedy coarsening with Direct interpolation
+AMG coarsest operator size = 96
+AMG coarsest level nnz = 5638
+AMG with smoother:
+Fixed Point Iteration solver, with preconditioner:
+Jacobi preconditioner
+IterationControl criteria: abs tol=1e-15; rel tol=1e-06; div tol=1e+08; max iter=1000000
+IterationControl initial residual = 1
+IterationControl NO criteria has been reached: res norm=0; rel val=0; iter=0
+AMG ends
+IterationControl RELATIVE criteria has been reached: res norm=3.29354e-11; rel val=4.17469e-05; iter=7
+PCG ends
+rocALUTION timing: field=p fill=6.73527 update+rebuild=0 transfer=2.02459 solve=22.6627 iters=7 target=1e-06 tolRel=8.92906e-05 normFactor=0.0270857 bnorm=0.00056243 status=2 coefSum=8.56329e-05
+rocALUTION:  Solving for p, Initial residual = 0.00279985, Final residual = 2.96205e-07, No Iterations 7
+time step continuity errors : sum local = 4.01141e-11, global = 1.57543e-21, cumulative = -2.42481e-21
+ExecutionTime = 10.05 s  ClockTime = 9 s
+
+End
+

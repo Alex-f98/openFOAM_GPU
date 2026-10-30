@@ -1,0 +1,9 @@
+# Medición publicada (28-oct-2026). Formato: np / variante / pasos / rc / exec / wall
+# Nota: hubo un primer intento a 32 rangos que falló (rc=1, sin decomposePar válido);
+# sus logs no se conservaron. Estas son las líneas buenas.
+np=1 variant=gamg steps=8 rc=0 exec=85.4 wall=85.75
+np=1 variant=p1 steps=8 rc=0 exec=57.3 wall=57.60
+np=1 variant=both1 steps=8 rc=0 exec=38.12 wall=38.42
+np=32 variant=gamg steps=20 rc=0 exec=7.04 med=0.0550 wall=9.24
+np=32 variant=p1 steps=20 rc=0 exec=4.27 med=0.0550 wall=6.43
+np=32 variant=both1 steps=20 rc=0 exec=2.21 med=0.0550 wall=4.26

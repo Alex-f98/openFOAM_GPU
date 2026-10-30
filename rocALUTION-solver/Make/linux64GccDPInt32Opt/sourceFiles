@@ -1,0 +1,5 @@
+SOURCE = \
+rocALUTIONLduSolver.C \
+rocALUTIONLduPreconditioner.C \
+
+# sources

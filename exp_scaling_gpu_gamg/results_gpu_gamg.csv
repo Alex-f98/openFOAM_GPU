@@ -1,0 +1,2 @@
+nx,ncells,pool,status,iters_done,wall_s,exec_last_s,step_first_s,step_med_s,step_per_cell_s,gfx_mean_pct,gfx_max_pct,vram_peak_mb,notes
+32,32768,managed; size=1024; incr=1024,timeout,0,1800.00,nan,nan,nan,nan,0.1,99.0,2161,gfx_runtime

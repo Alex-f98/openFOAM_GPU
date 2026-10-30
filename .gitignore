@@ -1,7 +1,56 @@
-ThirdParty-v2606
+# ============================================================================
+#  Qué NO se versiona (todo esto es generado o regenerable, y pesa GB)
+#  Lo que sí se versiona: documentación, scripts, diccionarios de los casos y
+#  resultados en CSV/PNG. Reglas de reconstrucción: ver TRASPASO.md §4.
+# ============================================================================
+
+# --- builds y paquetes de OpenFOAM (gigabytes) -------------------------------
+/OpenFOAM-v2606/
+/cpu/
+/ThirdParty-v2606/
+/dist/
+*.tar.gz
+*.tgz
+*.so
+*.o
+*.a
+
+# --- mallas, campos y directorios de tiempo (se regeneran) -------------------
+#   blockMesh + gen_case.py  ->  constant/polyMesh, 0/, ...
+**/polyMesh/
+**/processor*/
+**/postProcessing/
+**/[0-9]*/
+**/[0-9]*.[0-9]*/
+
+# --- matrices y datos binarios de los bancos ---------------------------------
+#   gpu_krylov/data/roc_matrix_p.bin (191 MB) se regenera con repro/dump128.sh
+*.bin
+gpu_krylov/data/*.bin
+
+# --- ruido ---------------------------------------------------------------
+__pycache__/
+*.pyc
+.DS_Store
 *.swp
-*.log
+*.swo
 *.bak
-dist/
-OpenFOAM-v2606/
-ThirdParty-v2606.tar.gz
+*~
+
+# --- logs de corridas -----------------------------------------------------
+#   (se ignoran salvo los de repro/, que son la evidencia publicada)
+*.log
+!repro/**/*.log
+
+# --- ejecutables compilados de los bancos (se compilan con hipcc) ------------
+gpu_krylov/bench_pcg
+gpu_krylov/bench_ilu
+gpu_krylov/bench_mg
+gpu_krylov/bench_mg_f32
+gpu_krylov/bench_pcie
+repro/bench_managed
+
+# --- PoCs compiladas de poc_rocalution (el fuente sí se versiona) ------------
+poc_rocalution/hip_latency
+poc_rocalution/poc_*
+!poc_rocalution/*.cpp

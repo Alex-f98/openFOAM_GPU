@@ -1,0 +1,2 @@
+Test-std_execution_quick.C
+EXE = $(FOAM_USER_APPBIN)/Test-std_execution_quick

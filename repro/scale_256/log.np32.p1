@@ -1,0 +1,661 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2606                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _481094fdf3-20260618 OPENFOAM=2606 version=v2606
+Arch   : "LSB;label=32;scalar=64"
+Exec   : icoFoam -parallel
+Date   : Oct 28 2026
+Time   : 16:47:54
+Host   : 3585e49b778d
+PID    : 757983
+I/O    : uncollated
+Case   : /tmp/opencode/precond/scale256/case
+nProcs : 32
+Hosts  :
+(
+    (3585e49b778d 32)
+)
+Pstream initialized with:
+    node communication : off [type=host] (32 ranks, 1 nodes)
+    topology controls  : none
+    consensus exchange : 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+memory pool : not available
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+
+--> FOAM Warning : allowSystemOperations : Allowing user-supplied system call operations.
+                   This can be a security risk if running untrusted cases
+                   through e.g. 'coded' on-the-fly-compilation functionality.
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+PISO: Operating solver in PISO mode
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.005
+
+Courant Number mean: 0 max: 0
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 8.7612e-07, No Iterations 57
+smoothSolver:  Solving for Uy, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Uz, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for p, Initial residual = 1, Final residual = 1, No Iterations 1
+time step continuity errors : sum local = 6.75466e-05, global = -1.29672e-18, cumulative = -1.29672e-18
+smoothSolver:  Solving for p, Initial residual = 0.699482, Final residual = 0.699482, No Iterations 1
+time step continuity errors : sum local = 6.75465e-05, global = 5.57231e-19, cumulative = -7.39487e-19
+ExecutionTime = 4.53 s  ClockTime = 4 s
+
+Time = 0.01
+
+Courant Number mean: 0.00854384 max: 0.939208
+smoothSolver:  Solving for Ux, Initial residual = 0.0945179, Final residual = 9.3798e-07, No Iterations 51
+smoothSolver:  Solving for Uy, Initial residual = 0.533916, Final residual = 9.60969e-07, No Iterations 54
+smoothSolver:  Solving for Uz, Initial residual = 0.459496, Final residual = 9.91815e-07, No Iterations 47
+smoothSolver:  Solving for p, Initial residual = 0.854493, Final residual = 0.733597, No Iterations 1
+time step continuity errors : sum local = 0.000125625, global = -7.52907e-19, cumulative = -1.49239e-18
+smoothSolver:  Solving for p, Initial residual = 0.693267, Final residual = 0.657571, No Iterations 1
+time step continuity errors : sum local = 0.000108913, global = 1.20457e-18, cumulative = -2.87823e-19
+ExecutionTime = 9.13 s  ClockTime = 9 s
+
+Time = 0.015
+
+Courant Number mean: 0.0130622 max: 1.09753
+smoothSolver:  Solving for Ux, Initial residual = 0.0431561, Final residual = 8.38608e-07, No Iterations 50
+smoothSolver:  Solving for Uy, Initial residual = 0.367354, Final residual = 8.95187e-07, No Iterations 58
+smoothSolver:  Solving for Uz, Initial residual = 0.582515, Final residual = 9.2072e-07, No Iterations 54
+smoothSolver:  Solving for p, Initial residual = 0.909538, Final residual = 0.751244, No Iterations 1
+time step continuity errors : sum local = 0.000191576, global = 3.35848e-18, cumulative = 3.07066e-18
+smoothSolver:  Solving for p, Initial residual = 0.740042, Final residual = 0.674862, No Iterations 1
+time step continuity errors : sum local = 0.000150573, global = -4.63174e-19, cumulative = 2.60748e-18
+ExecutionTime = 13.92 s  ClockTime = 14 s
+
+Time = 0.02
+
+Courant Number mean: 0.0164952 max: 1.14552
+smoothSolver:  Solving for Ux, Initial residual = 0.0317385, Final residual = 8.75718e-07, No Iterations 49
+smoothSolver:  Solving for Uy, Initial residual = 0.31821, Final residual = 9.01848e-07, No Iterations 59
+smoothSolver:  Solving for Uz, Initial residual = 0.576269, Final residual = 8.62508e-07, No Iterations 56
+smoothSolver:  Solving for p, Initial residual = 0.91464, Final residual = 0.730358, No Iterations 1
+time step continuity errors : sum local = 0.000261475, global = -6.61322e-19, cumulative = 1.94616e-18
+smoothSolver:  Solving for p, Initial residual = 0.672117, Final residual = 0.59428, No Iterations 1
+time step continuity errors : sum local = 0.000190378, global = 1.50623e-18, cumulative = 3.45239e-18
+ExecutionTime = 18.8 s  ClockTime = 19 s
+
+Time = 0.025
+
+Courant Number mean: 0.0195601 max: 1.16861
+smoothSolver:  Solving for Ux, Initial residual = 0.0287279, Final residual = 9.63827e-07, No Iterations 48
+smoothSolver:  Solving for Uy, Initial residual = 0.321084, Final residual = 9.71711e-07, No Iterations 59
+smoothSolver:  Solving for Uz, Initial residual = 0.59763, Final residual = 8.22794e-07, No Iterations 57
+smoothSolver:  Solving for p, Initial residual = 0.945055, Final residual = 0.737774, No Iterations 1
+time step continuity errors : sum local = 0.00037143, global = 1.09315e-18, cumulative = 4.54554e-18
+smoothSolver:  Solving for p, Initial residual = 0.709347, Final residual = 0.612674, No Iterations 1
+time step continuity errors : sum local = 0.000255749, global = 1.39558e-18, cumulative = 5.94113e-18
+ExecutionTime = 23.5 s  ClockTime = 23 s
+
+Time = 0.03
+
+Courant Number mean: 0.0222994 max: 1.18278
+smoothSolver:  Solving for Ux, Initial residual = 0.0303458, Final residual = 8.91022e-07, No Iterations 48
+smoothSolver:  Solving for Uy, Initial residual = 0.346609, Final residual = 9.25272e-07, No Iterations 59
+smoothSolver:  Solving for Uz, Initial residual = 0.623539, Final residual = 9.16635e-07, No Iterations 56
+smoothSolver:  Solving for p, Initial residual = 0.954578, Final residual = 0.72675, No Iterations 1
+time step continuity errors : sum local = 0.0005496, global = -2.10954e-20, cumulative = 5.92003e-18
+smoothSolver:  Solving for p, Initial residual = 0.663364, Final residual = 0.556039, No Iterations 1
+time step continuity errors : sum local = 0.000355201, global = 5.41052e-19, cumulative = 6.46108e-18
+ExecutionTime = 28.16 s  ClockTime = 28 s
+
+Time = 0.035
+
+Courant Number mean: 0.0251454 max: 1.19261
+smoothSolver:  Solving for Ux, Initial residual = 0.0367777, Final residual = 8.28325e-07, No Iterations 48
+smoothSolver:  Solving for Uy, Initial residual = 0.40056, Final residual = 8.41937e-07, No Iterations 59
+smoothSolver:  Solving for Uz, Initial residual = 0.632513, Final residual = 9.41702e-07, No Iterations 55
+smoothSolver:  Solving for p, Initial residual = 0.97017, Final residual = 0.722784, No Iterations 1
+time step continuity errors : sum local = 0.000852554, global = 1.45946e-19, cumulative = 6.60703e-18
+smoothSolver:  Solving for p, Initial residual = 0.669072, Final residual = 0.542859, No Iterations 1
+time step continuity errors : sum local = 0.000516855, global = -2.17276e-18, cumulative = 4.43426e-18
+ExecutionTime = 32.83 s  ClockTime = 33 s
+
+Time = 0.04
+
+Courant Number mean: 0.0276837 max: 1.19996
+smoothSolver:  Solving for Ux, Initial residual = 0.049582, Final residual = 9.53867e-07, No Iterations 47
+smoothSolver:  Solving for Uy, Initial residual = 0.480419, Final residual = 8.63184e-07, No Iterations 58
+smoothSolver:  Solving for Uz, Initial residual = 0.678997, Final residual = 9.94957e-07, No Iterations 54
+smoothSolver:  Solving for p, Initial residual = 0.97973, Final residual = 0.716448, No Iterations 1
+time step continuity errors : sum local = 0.0013678, global = -1.41654e-18, cumulative = 3.01773e-18
+smoothSolver:  Solving for p, Initial residual = 0.644275, Final residual = 0.507012, No Iterations 1
+time step continuity errors : sum local = 0.000782007, global = -2.59562e-18, cumulative = 4.22105e-19
+ExecutionTime = 37.46 s  ClockTime = 38 s
+
+Time = 0.045
+
+Courant Number mean: 0.0306833 max: 1.28938
+smoothSolver:  Solving for Ux, Initial residual = 0.0723779, Final residual = 9.05937e-07, No Iterations 47
+smoothSolver:  Solving for Uy, Initial residual = 0.565964, Final residual = 8.54504e-07, No Iterations 57
+smoothSolver:  Solving for Uz, Initial residual = 0.724971, Final residual = 8.77735e-07, No Iterations 53
+smoothSolver:  Solving for p, Initial residual = 0.984793, Final residual = 0.709339, No Iterations 1
+time step continuity errors : sum local = 0.00224975, global = 1.84297e-19, cumulative = 6.06403e-19
+smoothSolver:  Solving for p, Initial residual = 0.636646, Final residual = 0.48959, No Iterations 1
+time step continuity errors : sum local = 0.00122839, global = -1.04409e-18, cumulative = -4.37684e-19
+ExecutionTime = 41.97 s  ClockTime = 42 s
+
+Time = 0.05
+
+Courant Number mean: 0.0334348 max: 1.30351
+smoothSolver:  Solving for Ux, Initial residual = 0.110216, Final residual = 8.83357e-07, No Iterations 47
+smoothSolver:  Solving for Uy, Initial residual = 0.672611, Final residual = 9.68864e-07, No Iterations 55
+smoothSolver:  Solving for Uz, Initial residual = 0.780124, Final residual = 9.88649e-07, No Iterations 52
+smoothSolver:  Solving for p, Initial residual = 0.990355, Final residual = 0.706816, No Iterations 1
+time step continuity errors : sum local = 0.00377678, global = -2.08133e-19, cumulative = -6.45817e-19
+smoothSolver:  Solving for p, Initial residual = 0.627095, Final residual = 0.473205, No Iterations 1
+time step continuity errors : sum local = 0.0019929, global = 5.00071e-19, cumulative = -1.45746e-19
+ExecutionTime = 46.45 s  ClockTime = 47 s
+
+Time = 0.055
+
+Courant Number mean: 0.0371629 max: 2.27598
+smoothSolver:  Solving for Ux, Initial residual = 0.169798, Final residual = 9.43802e-07, No Iterations 47
+smoothSolver:  Solving for Uy, Initial residual = 0.740579, Final residual = 9.13405e-07, No Iterations 54
+smoothSolver:  Solving for Uz, Initial residual = 0.820153, Final residual = 8.63723e-07, No Iterations 51
+smoothSolver:  Solving for p, Initial residual = 0.989753, Final residual = 0.700909, No Iterations 1
+time step continuity errors : sum local = 0.00640126, global = 1.96105e-19, cumulative = 5.03595e-20
+smoothSolver:  Solving for p, Initial residual = 0.616426, Final residual = 0.458928, No Iterations 1
+time step continuity errors : sum local = 0.00330362, global = -2.50427e-18, cumulative = -2.45391e-18
+ExecutionTime = 50.86 s  ClockTime = 51 s
+
+Time = 0.06
+
+Courant Number mean: 0.0413754 max: 3.08739
+smoothSolver:  Solving for Ux, Initial residual = 0.254804, Final residual = 8.74526e-07, No Iterations 48
+smoothSolver:  Solving for Uy, Initial residual = 0.814237, Final residual = 9.41749e-07, No Iterations 53
+smoothSolver:  Solving for Uz, Initial residual = 0.856981, Final residual = 8.90578e-07, No Iterations 50
+smoothSolver:  Solving for p, Initial residual = 0.989758, Final residual = 0.698059, No Iterations 1
+time step continuity errors : sum local = 0.0109393, global = 1.36284e-18, cumulative = -1.09107e-18
+smoothSolver:  Solving for p, Initial residual = 0.608109, Final residual = 0.44825, No Iterations 1
+time step continuity errors : sum local = 0.00553553, global = -6.24975e-19, cumulative = -1.71604e-18
+ExecutionTime = 55.24 s  ClockTime = 56 s
+
+Time = 0.065
+
+Courant Number mean: 0.048 max: 5.42277
+smoothSolver:  Solving for Ux, Initial residual = 0.367909, Final residual = 9.00311e-07, No Iterations 50
+smoothSolver:  Solving for Uy, Initial residual = 0.845273, Final residual = 9.23494e-07, No Iterations 53
+smoothSolver:  Solving for Uz, Initial residual = 0.878842, Final residual = 9.56573e-07, No Iterations 50
+smoothSolver:  Solving for p, Initial residual = 0.979323, Final residual = 0.686112, No Iterations 1
+time step continuity errors : sum local = 0.0183208, global = -6.1664e-19, cumulative = -2.33268e-18
+smoothSolver:  Solving for p, Initial residual = 0.584331, Final residual = 0.428017, No Iterations 1
+time step continuity errors : sum local = 0.00923053, global = -2.08194e-18, cumulative = -4.41462e-18
+ExecutionTime = 59.67 s  ClockTime = 60 s
+
+Time = 0.07
+
+Courant Number mean: 0.0573964 max: 9.55286
+smoothSolver:  Solving for Ux, Initial residual = 0.479117, Final residual = 8.21924e-07, No Iterations 51
+smoothSolver:  Solving for Uy, Initial residual = 0.874854, Final residual = 8.52635e-07, No Iterations 53
+smoothSolver:  Solving for Uz, Initial residual = 0.89555, Final residual = 8.48495e-07, No Iterations 49
+smoothSolver:  Solving for p, Initial residual = 0.967884, Final residual = 0.673725, No Iterations 1
+time step continuity errors : sum local = 0.0298398, global = 1.5786e-18, cumulative = -2.83602e-18
+smoothSolver:  Solving for p, Initial residual = 0.55854, Final residual = 0.40365, No Iterations 1
+time step continuity errors : sum local = 0.014789, global = 8.00954e-19, cumulative = -2.03507e-18
+ExecutionTime = 64.22 s  ClockTime = 65 s
+
+Time = 0.075
+
+Courant Number mean: 0.0718696 max: 14.4687
+smoothSolver:  Solving for Ux, Initial residual = 0.591649, Final residual = 8.47723e-07, No Iterations 52
+smoothSolver:  Solving for Uy, Initial residual = 0.871103, Final residual = 8.73486e-07, No Iterations 53
+smoothSolver:  Solving for Uz, Initial residual = 0.890428, Final residual = 9.65988e-07, No Iterations 50
+smoothSolver:  Solving for p, Initial residual = 0.94073, Final residual = 0.639315, No Iterations 1
+time step continuity errors : sum local = 0.045078, global = 1.03324e-18, cumulative = -1.00182e-18
+smoothSolver:  Solving for p, Initial residual = 0.521936, Final residual = 0.375163, No Iterations 1
+time step continuity errors : sum local = 0.0224774, global = 7.22079e-19, cumulative = -2.79746e-19
+ExecutionTime = 68.71 s  ClockTime = 69 s
+
+Time = 0.08
+
+Courant Number mean: 0.0926094 max: 48.1692
+smoothSolver:  Solving for Ux, Initial residual = 0.641048, Final residual = 9.85698e-07, No Iterations 50
+smoothSolver:  Solving for Uy, Initial residual = 0.859956, Final residual = 9.13438e-07, No Iterations 52
+smoothSolver:  Solving for Uz, Initial residual = 0.879065, Final residual = 8.15791e-07, No Iterations 49
+smoothSolver:  Solving for p, Initial residual = 0.926867, Final residual = 0.624164, No Iterations 1
+time step continuity errors : sum local = 0.0643449, global = -3.52366e-20, cumulative = -3.14983e-19
+smoothSolver:  Solving for p, Initial residual = 0.504274, Final residual = 0.358374, No Iterations 1
+time step continuity errors : sum local = 0.0316934, global = 7.87131e-19, cumulative = 4.72148e-19
+ExecutionTime = 73.15 s  ClockTime = 74 s
+
+Time = 0.085
+
+Courant Number mean: 0.118773 max: 57.0282
+smoothSolver:  Solving for Ux, Initial residual = 0.714176, Final residual = 9.74377e-07, No Iterations 50
+smoothSolver:  Solving for Uy, Initial residual = 0.840135, Final residual = 9.03216e-07, No Iterations 51
+smoothSolver:  Solving for Uz, Initial residual = 0.868856, Final residual = 9.55378e-07, No Iterations 48
+smoothSolver:  Solving for p, Initial residual = 0.916658, Final residual = 0.601393, No Iterations 1
+time step continuity errors : sum local = 0.0865923, global = -1.9147e-18, cumulative = -1.44255e-18
+smoothSolver:  Solving for p, Initial residual = 0.479857, Final residual = 0.3412, No Iterations 1
+time step continuity errors : sum local = 0.0425086, global = 1.27827e-18, cumulative = -1.64279e-19
+ExecutionTime = 77.52 s  ClockTime = 78 s
+
+Time = 0.09
+
+Courant Number mean: 0.158423 max: 156.451
+smoothSolver:  Solving for Ux, Initial residual = 0.70809, Final residual = nan, No Iterations 1000
+smoothSolver:  Solving for Uy, Initial residual = 0.829795, Final residual = nan, No Iterations 1000
+smoothSolver:  Solving for Uz, Initial residual = 0.855382, Final residual = nan, No Iterations 1000
+smoothSolver:  Solving for p, Initial residual = nan, Final residual = nan, No Iterations 1
+time step continuity errors : sum local = nan, global = -nan, cumulative = -nan
+smoothSolver:  Solving for p, Initial residual = nan, Final residual = nan, No Iterations 1
+[0] 
+[0] 
+[0] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[0] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[0] 
+[0] file: processor0/system/data/solver/p at line 2.
+[0] 
+[0]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[0]     in file lnInclude/scalarImpl.txx at line 174.
+[0] 
+FOAM parallel run exiting
+[0] 
+[2] 
+[2] 
+[2] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[2] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[2] 
+[2] file: processor2/system/data/solver/p at line 2.
+[2] 
+[2]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[2]     in file lnInclude/scalarImpl.txx at line 174.
+[2] 
+FOAM parallel run exiting
+[2] 
+[4] 
+[4] 
+[4] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[4] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[4] 
+[4] file: processor4/system/data/solver/p at line 2.
+[4] 
+[4]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[4]     in file lnInclude/scalarImpl.txx at line 174.
+[4] 
+FOAM parallel run exiting
+[4] 
+[6] 
+[6] 
+[6] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[6] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[6] 
+[6] file: processor6/system/data/solver/p at line 2.
+[6] 
+[6]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[6]     in file lnInclude/scalarImpl.txx at line 174.
+[6] 
+FOAM parallel run exiting
+[6] 
+[10] 
+[10] 
+[10] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[10] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[10] 
+[10] file: processor10/system/data/solver/p at line 2.
+[10] 
+[10]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[10]     in file lnInclude/scalarImpl.txx at line 174.
+[10] 
+FOAM parallel run exiting
+[10] 
+[12] 
+[12] 
+[12] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[12] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[12] 
+[12] file: processor12/system/data/solver/p at line 2.
+[12] 
+[12]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[12]     in file lnInclude/scalarImpl.txx at line 174.
+[12] 
+FOAM parallel run exiting
+[12] 
+[16] 
+[16] 
+[16] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[16] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[16] 
+[16] file: processor16/system/data/solver/p at line 2.
+[16] 
+[16]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[16]     in file lnInclude/scalarImpl.txx at line 174.
+[16] 
+FOAM parallel run exiting
+[16] 
+[18] 
+[18] 
+[18] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[18] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[18] 
+[18] file: processor18/system/data/solver/p at line 2.
+[18] 
+[18]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[18]     in file lnInclude/scalarImpl.txx at line 174.
+[18] 
+FOAM parallel run exiting
+[18] 
+[19] 
+[19] 
+[19] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[19] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[19] 
+[19] file: processor19/system/data/solver/p at line 2.
+[19] 
+[19]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[19]     in file lnInclude/scalarImpl.txx at line 174.
+[19] 
+FOAM parallel run exiting
+[19] 
+[20] 
+[20] 
+[20] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[20] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[20] 
+[20] file: processor20/system/data/solver/p at line 2.
+[20] 
+[20]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[20]     in file lnInclude/scalarImpl.txx at line 174.
+[20] 
+FOAM parallel run exiting
+[20] 
+[21] 
+[21] 
+[21] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[21] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[21] 
+[21] file: processor21/system/data/solver/p at line 2.
+[21] 
+[21]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[21]     in file lnInclude/scalarImpl.txx at line 174.
+[21] 
+FOAM parallel run exiting
+[21] 
+[22] 
+[22] 
+[22] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[22] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[22] 
+[22] file: processor22/system/data/solver/p at line 2.
+[22] 
+[22]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[22]     in file lnInclude/scalarImpl.txx at line 174.
+[22] 
+FOAM parallel run exiting
+[22] 
+[24] 
+[24] 
+[24] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[24] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[24] 
+[24] file: processor24/system/data/solver/p at line 2.
+[24] 
+[24]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[24]     in file lnInclude/scalarImpl.txx at line 174.
+[24] 
+FOAM parallel run exiting
+[24] 
+[25] 
+[25] 
+[25] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[25] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[25] 
+[25] file: processor25/system/data/solver/p at line 2.
+[25] 
+[25]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[25]     in file lnInclude/scalarImpl.txx at line 174.
+[25] 
+FOAM parallel run exiting
+[25] 
+[26] 
+[26] 
+[26] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[26] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[26] 
+[26] file: processor26/system/data/solver/p at line 2.
+[26] 
+[26]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[26]     in file lnInclude/scalarImpl.txx at line 174.
+[26] 
+FOAM parallel run exiting
+[26] 
+[28] 
+[28] 
+[28] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[28] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[28] 
+[28] file: processor28/system/data/solver/p at line 2.
+[28] 
+[28]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[28]     in file lnInclude/scalarImpl.txx at line 174.
+[28] 
+FOAM parallel run exiting
+[28] 
+[29] 
+[29] 
+[29] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[29] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[29] 
+[29] file: processor29/system/data/solver/p at line 2.
+[29] 
+[29]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[29]     in file lnInclude/scalarImpl.txx at line 174.
+[29] 
+FOAM parallel run exiting
+[29] 
+[30] 
+[30] 
+[30] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[30] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[30] 
+[30] file: processor30/system/data/solver/p at line 2.
+[30] 
+[30]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[30]     in file lnInclude/scalarImpl.txx at line 174.
+[30] 
+FOAM parallel run exiting
+[30] 
+[31] 
+[31] 
+[31] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[31] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[31] 
+[31] file: processor31/system/data/solver/p at line 2.
+[31] 
+[31]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[31]     in file lnInclude/scalarImpl.txx at line 174.
+[31] 
+FOAM parallel run exiting
+[31] 
+[7] 
+[7] 
+[7] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[7] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[7] 
+[7] file: processor7/system/data/solver/p at line 2.
+[7] 
+[7]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[7]     in file lnInclude/scalarImpl.txx at line 174.
+[7] 
+FOAM parallel run exiting
+[7] 
+[8] 
+[8] 
+[8] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[8] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[8] 
+[8] file: processor8/system/data/solver/p at line 2.
+[8] 
+[8]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[8]     in file lnInclude/scalarImpl.txx at line 174.
+[8] 
+FOAM parallel run exiting
+[8] 
+[9] 
+[9] 
+[9] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[9] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[9] 
+[9] file: processor9/system/data/solver/p at line 2.
+[9] 
+[9]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[9]     in file lnInclude/scalarImpl.txx at line 174.
+[9] 
+FOAM parallel run exiting
+[9] 
+[11] 
+[11] 
+[11] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[11] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[11] 
+[11] file: processor11/system/data/solver/p at line 2.
+[11] 
+[11]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[11]     in file lnInclude/scalarImpl.txx at line 174.
+[11] 
+FOAM parallel run exiting
+[11] 
+[13] 
+[13] 
+[13] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[13] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[13] 
+[13] file: processor13/system/data/solver/p at line 2.
+[13] 
+[13]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[13]     in file lnInclude/scalarImpl.txx at line 174.
+[13] 
+FOAM parallel run exiting
+[13] 
+[14] 
+[14] 
+[14] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[14] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[14] 
+[14] file: processor14/system/data/solver/p at line 2.
+[14] 
+[14]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[14]     in file lnInclude/scalarImpl.txx at line 174.
+[14] 
+FOAM parallel run exiting
+[14] 
+[15] 
+[15] 
+[15] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[15] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[15] 
+[15] file: processor15/system/data/solver/p at line 2.
+[15] 
+[15]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[15]     in file lnInclude/scalarImpl.txx at line 174.
+[15] 
+FOAM parallel run exiting
+[15] 
+[17] 
+[17] 
+[17] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[17] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[17] 
+[17] file: processor17/system/data/solver/p at line 2.
+[17] 
+[17]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[17]     in file lnInclude/scalarImpl.txx at line 174.
+[17] 
+FOAM parallel run exiting
+[17] 
+[23] 
+[23] 
+[23] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[23] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[23] 
+[23] file: processor23/system/data/solver/p at line 2.
+[23] 
+[23]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[23]     in file lnInclude/scalarImpl.txx at line 174.
+[23] 
+FOAM parallel run exiting
+[23] 
+[27] 
+[27] 
+[27] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[27] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[27] 
+[27] file: processor27/system/data/solver/p at line 2.
+[27] 
+[27]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[27]     in file lnInclude/scalarImpl.txx at line 174.
+[27] 
+FOAM parallel run exiting
+[27] 
+[1] 
+[1] 
+[1] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[1] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[1] 
+[1] file: processor1/system/data/solver/p at line 2.
+[1] 
+[1]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[1]     in file lnInclude/scalarImpl.txx at line 174.
+[1] 
+FOAM parallel run exiting
+[1] 
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 24 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[3] 
+[3] 
+[3] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[3] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[3] 
+[3] file: processor3/system/data/solver/p at line 2.
+[3] 
+[3]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[3]     in file lnInclude/scalarImpl.txx at line 174.
+[3] 
+FOAM parallel run exiting
+[3] 
+[5] 
+[5] 
+[5] --> FOAM FATAL IO ERROR: (openfoam-2606)
+[5] Wrong token type - expected scalar value, found on line 2: word 'nan'
+[5] 
+[5] file: processor5/system/data/solver/p at line 2.
+[5] 
+[5]     From Foam::Istream& Foam::operator>>(Istream&, doubleScalar&)
+[5]     in file lnInclude/scalarImpl.txx at line 174.
+[5] 
+FOAM parallel run exiting
+[5] 
+[3585e49b778d:757969] 31 more processes have sent help message help-mpi-api.txt / mpi-abort
+[3585e49b778d:757969] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

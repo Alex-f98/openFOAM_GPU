@@ -1,0 +1,11 @@
+================ 2026-10-26T14:19:38+00:00  NX=32 ================
+case generated: /openfoamGPU/exp_scaling_gpu_gamg/case_32cube  (nx=32, steps=20, endTime=0.1)
+--- RESULT ---
+nx=32 ncells=32768 pool=managed; size=1024; incr=1024 status=timeout iters=1/20 rc=124
+wall=1800.0s  exec_last=nans  first_step=nans
+steady step (median)=nans  per_cell=nans
+gfx mean/max=0.1/99.0%  vram_peak=2161MB
+DECISION: STOP: ultima corrida status=timeout (1 pasos de los pedidos)
+================ 2026-10-26T14:49:45+00:00  FIN ================
+nx,ncells,pool,status,iters_done,wall_s,exec_last_s,step_first_s,step_med_s,step_per_cell_s,gfx_mean_pct,gfx_max_pct,vram_peak_mb,notes
+32,32768,managed; size=1024; incr=1024,timeout,1,1800.00,nan,nan,nan,nan,0.1,99.0,2161,gfx_runtime

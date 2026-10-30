@@ -1,0 +1,4 @@
+rocALUTIONLduSolver.C
+rocALUTIONLduPreconditioner.C
+
+LIB = $(FOAM_USER_LIBBIN)/librocALUTIONLduSolver

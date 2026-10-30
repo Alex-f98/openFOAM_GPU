@@ -1,0 +1,7 @@
+mesh,ncells,config,step_med_s,step_first_s,total_exec_s,wall_s,vram_peak_MiB,gpu_side_ms,notes
+32,32768,gpu-full,0.090,1.830,4.32,3.05,1701,45,"p+U rocALUTION RS-AMG"
+32,32768,gpu-p-only,0.060,0.970,2.19,2.19,1645,20,"p GPU, U CPU symGS"
+64,262144,gpu-full,0.470,2.700,13.02,11.52,2647,195,"p+U rocALUTION RS-AMG"
+64,262144,gpu-p-only,0.390,2.170,10.05,9.91,1845,90,"p GPU, U CPU symGS"
+128,2097152,gpu-full,4.500,16.400,111.22,107.84,6689,1349,"p+U rocALUTION RS-AMG"
+128,2097152,gpu-p-only,6.050,15.780,135.93,134.21,3054,500,"p GPU, U CPU symGS"

@@ -1,0 +1,4 @@
+SOURCE = \
+Test-std_execution_quick.C \
+
+# sources

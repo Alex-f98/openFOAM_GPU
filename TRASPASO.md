@@ -137,6 +137,12 @@ Mallas usadas: cubos de 16³ a 256³ celdas (4 mil a 16,8 M). La de trabajo es *
 `gpu_krylov/results_krylov_residente.csv` (GPU) y `COMPARACION_PRESION_GPU_CPU.md` (la
 comparación y el método).
 
+**Al clonar el repositorio** (6,6 MB, 547 ficheros) **no vienen**: los builds
+(`OpenFOAM-v2606/`, `cpu/`, `ThirdParty-v2606/`, `dist/`), las mallas
+(`constant/polyMesh/`), los campos (`0/`, `0.1/`, `processor*/`) ni
+`gpu_krylov/data/roc_matrix_p.bin`. Se regeneran con §4 y §5; cada exclusión está
+comentada en `.gitignore`.
+
 ---
 
 ## 4. Compilar

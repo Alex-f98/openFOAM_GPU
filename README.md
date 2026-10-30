@@ -6,6 +6,10 @@ en una AMD Instinct MI210: build, plugins, experimentos, bancos de medida y resu
 > **Empieza por [`TRASPASO.md`](TRASPASO.md)** si vas a continuar el trabajo. Está pensado
 > para leerlo en 15 minutos y poder compilar y ejecutar sin ayuda.
 
+**Repositorio:** <https://github.com/Alex-f98/openFOAM_GPU> · el clon pesa 6,6 MB: los builds,
+las mallas, los campos y la matriz de 191 MB **no** se versionan (se regeneran, ver
+[`TRASPASO.md`](TRASPASO.md) §4 y §5; el detalle está en [`.gitignore`](.gitignore)).
+
 ---
 
 ## El resultado, en una tabla

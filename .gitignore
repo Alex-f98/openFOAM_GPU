@@ -1,0 +1,7 @@
+ThirdParty-v2606
+*.swp
+*.log
+*.bak
+dist/
+OpenFOAM-v2606/
+ThirdParty-v2606.tar.gz
